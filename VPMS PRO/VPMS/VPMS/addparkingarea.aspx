@@ -198,7 +198,7 @@ li a:hover {
   
     <div>
     
-        <table class="auto-style1" border="0">
+        <table class="auto-style1" border="0" CELLSPACING="0">
             <tr>
                 <td class="auto-style4" colspan="2" style="background-color: #343956; color: #90A1B6;">
                         <strong style="font-size: 35px">BENS PARKING<br />

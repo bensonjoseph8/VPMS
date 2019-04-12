@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="parkslot.aspx.cs" Inherits="VPMS.parkslot" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="addstaff.aspx.cs" Inherits="VPMS.addstaff" %>
 
 <!DOCTYPE html>
 
@@ -8,14 +8,15 @@
     <style type="text/css">
         .auto-style1 {
             width: 100%;
-            height: 986px;
+            height: 627px;
+            margin-bottom: 0px;
         }
         .auto-style2 {
-            height: 543px;
-            width: 1126px;
+            height: 496px;
+            width: 1165px;
         }
         .auto-style3 {
-            height: 543px;
+            height: 496px;
             width: 65px;
         }
         .auto-style4 {
@@ -170,17 +171,17 @@ li a:hover {
         margin-bottom:3px;
     }
         .auto-style8 {
-            width: 120%;
-            height: 362px;
+            width: 106%;
+            height: 369px;
         }
         .auto-style9 {
-            height: 401px;
-            width: 488px;
+            height: 525px;
+            width: 475px;
             margin-left: 0px;
             text-align: left;
         }
         .auto-style13 {
-            width: 532px;
+            width: 525px;
             height: 357px;
         }
         .auto-style24 {
@@ -189,27 +190,41 @@ li a:hover {
         }
         .auto-style28 {
             height: 59px;
-            width: 450px;
+            width: 438px;
         }
         .auto-style29 {
             height: 51px;
-            width: 450px;
+            width: 438px;
         }
         .auto-style31 {
             height: 59px;
             width: 187px;
         }
-        .auto-style32 {
-            margin-left: 15px;
-        }
         .auto-style33 {
             text-align: left;
         }
         .auto-style34 {
-            height: 386px;
+            height: 487px;
         }
         .auto-style35 {
             text-align: center;
+            height: 47px;
+        }
+        .auto-style36 {
+            width: 187px;
+            height: 20px;
+        }
+        .auto-style37 {
+            height: 20px;
+            width: 438px;
+        }
+        .auto-style38 {
+            width: 187px;
+            height: 45px;
+        }
+        .auto-style39 {
+            height: 45px;
+            width: 438px;
         }
         </style>
 </head>
@@ -217,15 +232,15 @@ li a:hover {
   
     <div>
     
-        <table class="auto-style1" style="height: auto" border="0" CELLSPACING="0">
+        <table class="auto-style1" style="border-color: #343955; border-spacing: 0px;" border="0" CELLSPACING="0" align="center">
             <tr>
-                <td class="auto-style4" colspan="2" style="background-color: #343956; color: #90A1B6;">
+                <td class="auto-style4" colspan="2" style="border-style: solid; border-color: #343956; background-color: #343956; color: #90A1B6;">
                         <strong style="font-size: 35px">BENS PARKING<br />
                     <em>Online Vehicle Parking</em></strong></td>
                 
             </tr>
             <tr>
-                <td class="auto-style3" style="background-color: #343956; color: #90A1B6;">
+                <td class="auto-style3" style="border-style: solid; border-color: #343956; background-color: #343956; color: #90A1B6;">
                      <ul>
                          
                         <li><a href="app-event-calender.html"> PARKING Area </a></li>
@@ -246,83 +261,99 @@ li a:hover {
                 <td class="auto-style2"> <div id="wrapper" class="auto-style9">
         <form id="form1" runat="server" class="auto-style13">
             <fieldset class="auto-style34">
-                <legend class="auto-style33">add&nbsp; parking slot</legend>
+                <legend class="auto-style33">add&nbsp; staff</legend>
               <div>
 
-                  <table class="auto-style8">
+                  <table class="auto-style8" align="center">
                       <tr>
                           <td class="auto-style24">
                              
-                              <asp:Label ID="Label1" runat="server" Text="Select Location"></asp:Label>
+                              <asp:Label ID="Label1" runat="server" Text="Staff Name"></asp:Label>
                              
                           </td>
                           <td class="auto-style29">
                              
-                              <asp:DropDownList ID="ddsloc" runat="server"  Height="25px" Width="177px" OnSelectedIndexChanged="ddsloc_SelectedIndexChanged" AutoPostBack="True">
-                              </asp:DropDownList>
+                              <asp:TextBox ID="txtstaffname" runat="server" Width="150px"></asp:TextBox>
                              
-                              <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddsloc" ErrorMessage="Please select a location" ForeColor="#CC0000" Font-Size="Small"></asp:RequiredFieldValidator>
+                              <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtstaffname" ErrorMessage="Please Enter Your Name" ForeColor="#CC0000" Font-Size="Small"></asp:RequiredFieldValidator>
                              
                           </td>
                       </tr>
                       <tr>
                           <td class="auto-style24">
                             
-                              Select Parking Area</td>
+                              <asp:Label ID="Label5" runat="server" Text="Job Location"></asp:Label>
+                             
+                          </td>
                           <td class="auto-style29">
                              
-                              <asp:DropDownList ID="ddsarea" runat="server" Height="25px" Width="177px" AutoPostBack="True" OnSelectedIndexChanged="ddsarea_SelectedIndexChanged">
+                              <asp:DropDownList ID="ddstaffloc" runat="server" Width="150px" Height="30px">
                               </asp:DropDownList>
                              
-                              <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="ddsarea" ErrorMessage="Please select a Area" ForeColor="#CC0000" Font-Size="Small"></asp:RequiredFieldValidator>
+                              <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="ddstaffloc" ErrorMessage="Select Your Job Location" ForeColor="#CC0000" Font-Size="Small"></asp:RequiredFieldValidator>
                              
                           </td>
                       </tr>
                       <tr>
                           <td class="auto-style24">
                              
-                              <asp:Label ID="Label2" runat="server" Text="Rows"></asp:Label>
+                              <asp:Label ID="Label2" runat="server" Text="Job Area"></asp:Label>
                              
                           </td>
                           <td class="auto-style29">
                               
-                              <asp:TextBox ID="txtrow" runat="server" CssClass="auto-style32" Width="45px"></asp:TextBox>
+                              <asp:DropDownList ID="ddstaffarea" runat="server" Width="150px" Height="30px">
+                              </asp:DropDownList>
                             
-                              <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtrow" ErrorMessage="Enter required Row number" ForeColor="#CC0000" Font-Size="Small"></asp:RequiredFieldValidator>
+                              <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="ddstaffarea" ErrorMessage="select Your Job Area" ForeColor="#CC0000" Font-Size="Small"></asp:RequiredFieldValidator>
                               
                           </td>
                       </tr>
                       <tr>
-                          <td class="auto-style24">
+                          <td class="auto-style38">
                              
-                              <asp:Label ID="Label3" runat="server" Text="Columns"></asp:Label>
+                              <asp:Label ID="Label3" runat="server" Text="Address"></asp:Label>
                              
                           </td>
-                          <td class="auto-style29">
+                          <td class="auto-style39">
                             
-                              <asp:TextBox ID="txtcol" runat="server" CssClass="auto-style32" Width="45px"></asp:TextBox>
+                              <asp:TextBox ID="txtstaffadd" runat="server" Width="150px" TextMode="MultiLine"></asp:TextBox>
                             
-                              <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtcol" ErrorMessage="Enter required Column number" ForeColor="#CC0000" Font-Size="Small"></asp:RequiredFieldValidator>
+                              <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtstaffadd" ErrorMessage="Enter Your address" ForeColor="#CC0000" Font-Size="Small"></asp:RequiredFieldValidator>
                           </td>
                       </tr>
                       <tr>
                           <td class="auto-style31">
                             
-                              <asp:Label ID="Label4" runat="server" Text="Slot no / Name"></asp:Label>
+                              <asp:Label ID="Label4" runat="server" Text="Phone Number"></asp:Label>
                             
                           </td>
                           <td class="auto-style28">
                             
-                              <asp:TextBox ID="txtslot" runat="server" CssClass="auto-style32" Width="102px"></asp:TextBox>
+                              <asp:TextBox ID="txtstaffphone" runat="server" Width="150px"></asp:TextBox>
                             
-                              <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtslot" ErrorMessage="Enter a Slot Name or Number" ForeColor="#CC0000" Font-Size="Small"></asp:RequiredFieldValidator>
+                              <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtstaffphone" ErrorMessage="Enter Your Phone Number" ForeColor="#CC0000" Font-Size="Small"></asp:RequiredFieldValidator>
+                            
+                          </td>
+                      </tr>
+                      <tr>
+                          <td class="auto-style36">
+                            
+                              <asp:Label ID="Label6" runat="server">Photo</asp:Label>
+                            
+                          </td>
+                          <td class="auto-style37">
+                            
+                              <asp:FileUpload ID="filestaffphoto" runat="server" Width="130px" />
+                            
+                              <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="filestaffphoto" ErrorMessage="Please Upload Your Photo" ForeColor="#CC0000" Font-Size="Small"></asp:RequiredFieldValidator>
                             
                           </td>
                       </tr>
                       <tr>
                           <td class="auto-style35" colspan="2">
                             
-                              <asp:Button ID="btaddslot" runat="server" Text="Add Slot" OnClick="btaddslot_Click" Height="42px" Width="118px" />
+                              <asp:Button ID="btstaff" runat="server" Text="OK" Width="82px" />
                              
                           </td>
                       </tr>

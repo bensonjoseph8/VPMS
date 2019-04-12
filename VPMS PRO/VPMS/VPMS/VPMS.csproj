@@ -199,6 +199,7 @@
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="addparkingarea.aspx" />
+    <Content Include="addstaff.aspx" />
     <Content Include="admin.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
@@ -212,11 +213,13 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="image\2016-MERCEDES-MAYBACH-PULLMAN-HD-724x407.jpg" />
     <Content Include="image\calender.png" />
     <Content Include="image\greencar.png" />
+    <Content Include="image\logo.jpg" />
     <Content Include="image\redcar.png" />
+    <Content Include="image\smoke.mp4" />
     <Content Include="image\tablebg.jpg" />
-    <Content Include="index.aspx" />
     <Content Include="parkingarea.aspx" />
     <Content Include="parkslot.aspx" />
     <Content Include="pickslot.aspx" />
@@ -227,11 +230,12 @@
     <Content Include="Scripts\jquery.dynDateTime.min.js" />
     <Content Include="slot.aspx" />
     <Content Include="Styles\calendar-blue.css" />
+    <Content Include="userhome.aspx" />
     <Content Include="USER\Book_Slots.aspx" />
-    <Content Include="USER\login.aspx" />
+    <Content Include="login.aspx" />
     <Content Include="USER\registration.aspx" />
     <Content Include="userindex.aspx" />
-    <Content Include="USER\test.aspx" />
+    <Content Include="test.aspx" />
     <Content Include="WebForm1.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
@@ -396,6 +400,13 @@
     <Compile Include="addparkingarea.aspx.designer.cs">
       <DependentUpon>addparkingarea.aspx</DependentUpon>
     </Compile>
+    <Compile Include="addstaff.aspx.cs">
+      <DependentUpon>addstaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addstaff.aspx.designer.cs">
+      <DependentUpon>addstaff.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin.aspx.cs">
       <DependentUpon>admin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -433,13 +444,6 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="index.aspx.designer.cs">
-      <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="parkingarea.aspx.cs">
@@ -486,6 +490,13 @@
       <DependentUpon>slot.aspx</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="userhome.aspx.cs">
+      <DependentUpon>userhome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userhome.aspx.designer.cs">
+      <DependentUpon>userhome.aspx</DependentUpon>
+    </Compile>
     <Compile Include="USER\BindingSource.cs" />
     <Compile Include="USER\Book_Slots.aspx.cs">
       <DependentUpon>Book_Slots.aspx</DependentUpon>
@@ -494,11 +505,11 @@
     <Compile Include="USER\Book_Slots.aspx.designer.cs">
       <DependentUpon>Book_Slots.aspx</DependentUpon>
     </Compile>
-    <Compile Include="USER\login.aspx.cs">
+    <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="USER\login.aspx.designer.cs">
+    <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="USER\registration.aspx.cs">
@@ -515,11 +526,11 @@
     <Compile Include="userindex.aspx.designer.cs">
       <DependentUpon>userindex.aspx</DependentUpon>
     </Compile>
-    <Compile Include="USER\test.aspx.cs">
+    <Compile Include="test.aspx.cs">
       <DependentUpon>test.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="USER\test.aspx.designer.cs">
+    <Compile Include="test.aspx.designer.cs">
       <DependentUpon>test.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">

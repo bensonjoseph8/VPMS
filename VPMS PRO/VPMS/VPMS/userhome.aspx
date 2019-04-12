@@ -1,12 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="registration.aspx.cs" Inherits="VPMS.USER.registration" %>
-
+﻿
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="userhome.aspx.cs" Inherits="VPMS.userhome" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style type="text/css">
         .auto-style1 {
@@ -20,7 +20,11 @@
         }
         </style>
      <style>
+        #menu{
+            width:550px;
+        margin:0 auto;
        
+        }
 
 ul {
   list-style-type: none;
@@ -171,24 +175,77 @@ li a:hover {
         color:#999898;
         margin-bottom:3px;
     }
-        .auto-style9 {
-            height: 280px;
-            width: 490px;
-            margin-left: 0px;
-            text-align: left;
-        }
         .auto-style10 {
-            height: 503px;
+            height: 640px;
         }
         
         .auto-style11 {
-            left: 453px;
-            top: 111px;
+            height: 19px;
+            text-align: center;
         }
         
-        .auto-style12 {
-            height: 50px;
+        .auto-style13 {
+            width: 710px;
         }
+        
+        .auto-style14 {
+            width: 707px;
+        }
+        
+        p {
+            text-transform: uppercase;
+            letter-spacing: .5em;
+            display: inline-block;
+            border: 4px double rgba(255,255,255,.25);
+            border-width: 4px 0;
+           
+        }
+  
+ p span {
+
+  	font: 700 4em/1 "Oswald", sans-serif;
+  	letter-spacing: 0;
+  	padding: .25em 0 .325em;
+	  display: block;
+	  margin: 0 auto;
+  	text-shadow: 0 0 80px rgba(255,255,255,.5);
+
+/* Clip Background Image */
+
+	  background: url(http://f.cl.ly/items/010q3E1u3p2Q0j1L1S1o/animated_text_fill.png) repeat-y;
+	  -webkit-background-clip: text;
+	  background-clip: text;
+
+/* Animate Background Image */
+
+	  -webkit-text-fill-color: transparent;
+	  -webkit-animation: aitf 80s linear infinite;
+
+/* Activate hardware acceleration for smoother animations */
+
+	  -webkit-transform: translate3d(0,0,0);
+	  -webkit-backface-visibility: hidden;
+
+  }
+
+
+/* Animate Background Image */
+
+@-webkit-keyframes aitf {
+	0% { background-position: 0% 50%; }
+	100% { background-position: 100% 50%; }
+}
+        
+        
+        
+        .auto-style16 {
+            height: 327px;
+            text-align: center;
+            left: 12px;
+            top: 280px;
+        }
+        
+        
         
         </style>
 </head>
@@ -198,64 +255,58 @@ li a:hover {
     
         <table class="auto-style1" style="background-position: center center; background-image: none; background-repeat: no-repeat; background-attachment: fixed;" border="0" CELLSPACING="0">
             <tr>
-                <td class="auto-style4" style="color: #90A1B6;">
-                        <strong style="font-size: 35px">BENS PARKING<br />
-                    <em>Online Vehicle Parking</em></strong></td>
+                <td class="auto-style4" style="color: #90A1B6;" colspan="2">
+                    
+                    <p><span>BENS PARKING<br /></span> 
+                    <em>Online Vehicle Parking</em></p>
+                </td>
                 
             </tr>
             <tr>
-                <td class="auto-style12">
-                     <div id="menu" class="auto-style14">
+                <td class="auto-style11" colspan="2" >
+                      <div id="menu" class="auto-style14">
                         <ul class="auto-style13">
-                            <li>
-                                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/userhome.aspx"><i class="fa fa-fw fa-home" style="font-size:48px;"></i></asp:HyperLink></li>
                           
+                            <li>
+                                <asp:HyperLink ID="HyperLink1" runat="server">ABOUT US</asp:HyperLink></li>
+                            <li> <asp:HyperLink ID="HyperLink2" runat="server">PARKING AREA</asp:HyperLink></li>
+                            <li> <asp:HyperLink ID="HyperLink3" runat="server">FEE</asp:HyperLink></li>
+                            <li> <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/USER/registration.aspx">REGISTER</asp:HyperLink></li>
+                            <%if (Session["uname"] == null)
+                                { %>
+                              <li> <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/login.aspx"><i class="fa fa-fw fa-user"></i>LOGIN</asp:HyperLink></li>
+                            <%}else { %>
+                            <li> <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/login.aspx"><i class="fa fa-fw fa-user"></i>LOGOUT
+                                
+                                 </asp:HyperLink></li>
+                            <%} %>
                         </ul>
                     </div>
-                     
+                    
                 </td>
             </tr>
             <tr>
-                <td class="auto-style3">
-                    <div id="wrapper" class="auto-style9">
+                <td >
+                    <form id="form1" runat="server">
+            <fieldset class="auto-style16">
+                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label><br />
+                <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label><br />
+                <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label><br />
+                <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label><br />
+                <asp:Label ID="Label5" runat="server" Text="Label"></asp:Label><br />
+                <asp:Label ID="Label6" runat="server" Text="Label"></asp:Label><br />
+                <asp:Label ID="Label7" runat="server" Text="Label"></asp:Label><br />
 
- <form id="form1" runat="server">
-            <fieldset class="auto-style11">
-                <legend>Register</legend>
-                <div>
-                    
-                <asp:TextBox ID="name" runat="server" BorderStyle="Double" placeholder="Ful Name"></asp:TextBox>
-                    
-                </div>
-                <div>
-                    <asp:TextBox ID="address" runat="server" placeholder="Address" BorderStyle="Double"></asp:TextBox>
-                </div>
-                <div>
-                     <asp:TextBox ID="phone" runat="server" placeholder="Phone Number" BorderStyle="Double"></asp:TextBox>
-                </div>
-                <div>
-                   <asp:TextBox ID="email" runat="server" placeholder="Email" BorderStyle="Double"></asp:TextBox>
-                </div>
-                 <div>
-                     <asp:TextBox ID="username" runat="server" placeholder="Username" BorderStyle="Double"></asp:TextBox>
-                </div>
-                 <div>
-                     <asp:TextBox ID="password" runat="server" placeholder="Username" BorderStyle="Double"></asp:TextBox>
-                </div>
-                 <div>
-                     <asp:TextBox ID="cpassword" runat="server" placeholder="Username" BorderStyle="Double"></asp:TextBox>
-                </div> 
-                <asp:Button ID="register" runat="server" Text="REGISTER" OnClick="register_Click" />
-                <div> <asp:HyperLink ID="login1" runat="server" Font-Italic="True" ForeColor="#0066FF" NavigateUrl="~/USER/login.aspx">Login</asp:HyperLink></div>
+
+
               
             </fieldset>    
         </form>
- 
-      
-
-
-    </div>
-                     &nbsp;</td>
+                    
+                    &nbsp;</td>
+                <td >
+                    
+                    &nbsp;</td>
             </tr>
         </table>
     

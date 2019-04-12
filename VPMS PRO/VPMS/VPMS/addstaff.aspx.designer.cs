@@ -10,7 +10,7 @@
 namespace VPMS {
     
     
-    public partial class parkslot {
+    public partial class addstaff {
         
         /// <summary>
         /// form1 control.
@@ -31,13 +31,13 @@ namespace VPMS {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// ddsloc control.
+        /// txtstaffname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddsloc;
+        protected global::System.Web.UI.WebControls.TextBox txtstaffname;
         
         /// <summary>
         /// RequiredFieldValidator1 control.
@@ -49,13 +49,22 @@ namespace VPMS {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
-        /// ddsarea control.
+        /// Label5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddsarea;
+        protected global::System.Web.UI.WebControls.Label Label5;
+        
+        /// <summary>
+        /// ddstaffloc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddstaffloc;
         
         /// <summary>
         /// RequiredFieldValidator2 control.
@@ -76,13 +85,13 @@ namespace VPMS {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// txtrow control.
+        /// ddstaffarea control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtrow;
+        protected global::System.Web.UI.WebControls.DropDownList ddstaffarea;
         
         /// <summary>
         /// RequiredFieldValidator3 control.
@@ -103,13 +112,13 @@ namespace VPMS {
         protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
-        /// txtcol control.
+        /// txtstaffadd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtcol;
+        protected global::System.Web.UI.WebControls.TextBox txtstaffadd;
         
         /// <summary>
         /// RequiredFieldValidator4 control.
@@ -130,13 +139,13 @@ namespace VPMS {
         protected global::System.Web.UI.WebControls.Label Label4;
         
         /// <summary>
-        /// txtslot control.
+        /// txtstaffphone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtslot;
+        protected global::System.Web.UI.WebControls.TextBox txtstaffphone;
         
         /// <summary>
         /// RequiredFieldValidator5 control.
@@ -148,12 +157,39 @@ namespace VPMS {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator5;
         
         /// <summary>
-        /// btaddslot control.
+        /// Label6 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btaddslot;
+        protected global::System.Web.UI.WebControls.Label Label6;
+        
+        /// <summary>
+        /// filestaffphoto control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload filestaffphoto;
+        
+        /// <summary>
+        /// RequiredFieldValidator6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator6;
+        
+        /// <summary>
+        /// btstaff control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btstaff;
     }
 }

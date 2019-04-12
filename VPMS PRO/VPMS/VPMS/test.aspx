@@ -1,11 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="userindex.aspx.cs" Inherits="VPMS.USER.userindex" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="test.aspx.cs" Inherits="VPMS.USER.test" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <script src type="text/javascript"></script>
+ <script src="Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
 <script src="Scripts/jquery.dynDateTime.min.js" type="text/javascript"></script>
 <script src="Scripts/calendar-en.min.js" type="text/javascript"></script>
 <link href="Styles/calendar-blue.css" rel="stylesheet" type="text/css" />
@@ -38,13 +38,20 @@
     });
 </script>
     <style type="text/css">
-        .auto-style1 {
-            width: 100%;
-            height: 627px;
-            margin-right: 0px;
+        .auto-style2 {
+            height: 543px;
+            width: 1126px;
+        }
+        .auto-style3 {
+            height: 543px;
+            width: 65px;
+        }
+        .auto-style4 {
+            height: 93px;
+            text-align: center;
         }
         </style>
-    <style>
+     <style>
 ul {
   list-style-type: none;
   margin: 0;
@@ -131,9 +138,9 @@ li a:hover {
         height: 22px;
         width:280px;
     }
-    input[type="text"]:focus,
-    input[type="password"]:focus
-    input[type=DropDownList]:focus {
+    input[type="text"],
+    input[type="password"]
+    input[type=DropDownList] {
         background:#f5fcfe;
         text-indent: 0;
         z-index: 1;
@@ -190,192 +197,178 @@ li a:hover {
         color:#999898;
         margin-bottom:3px;
     }
-        .auto-style8 {
-            width: 101%;
-            height: 303px;
-        }
         .auto-style9 {
-            height: 388px;
-            width: 462px;
+            height: 480px;
+            width: 545px;
             margin-left: 0px;
+            text-align: left;
         }
-        .auto-style11 {
-            width: 28%;
+        .auto-style36 {
+            width: 198%;
+            height: 416px;
+            z-index: auto;
+            position: relative;
+            left: 22px;
+            top: 50px;
+            margin-bottom: 0px;
         }
-        .auto-style12 {
-            width: 15%;
+        .auto-style37 {
+            width: 522px;
         }
-        .auto-style13 {
-            width: 556px;
-            height: 357px;
+        .auto-style42 {
+            width: 153px;
+            height: 60px;
         }
-        .auto-style14 {
-            width: 28%;
-            height: 24px;
+        .auto-style43 {
+            width: 330px;
+            height: 60px;
         }
-        .auto-style24 {
-            width: 169px;
-            height: 51px;
+        .auto-style44 {
+            width: 493px;
         }
-        .auto-style25 {
-            height: 51px;
-        }
-        .auto-style26 {
+        .auto-style45 {
             text-align: center;
         }
-        .auto-style27 {
-            height: 112px;
-            text-align: center;
+        .auto-style46 {
+            width: 100%;
+            height: 620px;
+            position: relative;
+            left: 0px;
+            top: 0px;
+            margin-right: 0px;
         }
-        .auto-style28 {
-            width: 28%;
-            height: 12px;
+        .auto-style47 {
+            text-align: left;
+            width: 174px;
+            height: 34px;
         }
         </style>
 </head>
 <body>
-    
+  
     <div>
-     <table class="auto-style1" CELLSPACING="0">
+        
+    
+        <table class="auto-style46" border="0" CELLSPACING="0">
             <tr>
-                <td colspan="3" class="auto-style27" style="background-color:  #343956; border-bottom-color:  #343956; color: #90A1B6;">
-                       
-                    <strong style="font-size: 35px">BENS PARKING<br />
+                <td class="auto-style4" colspan="2" style="background-color: #343956; color: #90A1B6;">
+                    <div class="auto-style47">
+
+                        <asp:Image ID="Image1" runat="server" BorderStyle="Groove" Height="110px" ImageUrl="~/image/logo.jpg" Width="192px" />
+
+                    </div>
+                        <strong style="font-size: 35px">BENS PARKING<br />
                     <em>Online Vehicle Parking</em></strong></td>
+                
             </tr>
             <tr>
-                <td class="auto-style12" rowspan="17" style="background-color:#343956"><div><ul class="auto-style26">
-  <li><a href="#home">Ho me</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
-                     <li></li>
-                       <li></li>
-                       <li></li>
-                       <li></li>
-                       <li></li>
-                       <li></li>
-                       <li></li>
-                       <li></li>
-                       <li></li>
-                       <li></li>
-                       <li></li>
-                       <li></li>
-                       <li></li>
-                       <li></li>
-                       <li></li>
-                       <li></li>
-                       <li></li>
-                       <li></li>
-                       <li></li>
-                    
-</ul></div>&nbsp;</td>
-                <td rowspan="17"> <div id="wrapper" class="auto-style9">
-        <form id="form1" runat="server" class="auto-style13">
+                <td class="auto-style3" style="background-color: #343956; color: #90A1B6;">
+                     <ul>
+                         
+                        <li><a href="app-event-calender.html"> PARKING Area </a></li>
+                        <li><a href="app-email.html">PARKING SLOT</a></li>
+                        <li><a href="app-profile.html">STAFF</a></li>
+                        <li><a href="app-widget-card.html"> BOOKINGS</a></li>                       
+                        
+                            
+                                <li><a href="page-login.html">Login</a></li>
+                                <li><a href="page-register.html">Register</a></li>
+                                <li><a href="page-reset-password.html">Forgot password</a></li>
+                            </ul>
+                        
+                       <ul>
+                        <li><a><i class="ti-close"></i> Logout</a></li>
+                    </ul>
+                </td>
+                <td class="auto-style2"> <div class="auto-style9"><form id="form2" runat="server" class="auto-style13">
             <fieldset>
                 <legend>BOOKING</legend>
+       
+                    <table class="auto-style36">
+                        <tr>
+                            <td class="auto-style37">
               <div>
 
-                  <table class="auto-style8">
+                  <table class="auto-style44">
                       <tr>
-                          <td class="auto-style24">
+                          <td class="auto-style42">
                               <asp:Label ID="Label1" runat="server" Text="Location"></asp:Label>
                           </td>
-                          <td class="auto-style25">
-                              <asp:DropDownList ID="ddusloc" runat="server" Height="31px" Width="290px" OnSelectedIndexChanged="ddusloc_SelectedIndexChanged">
+                          <td class="auto-style43">
+                              <asp:DropDownList ID="ddusloc" runat="server" Height="31px" Width="290px" OnSelectedIndexChanged="ddusloc_SelectedIndexChanged" AutoPostBack="True">
                               </asp:DropDownList>
                           </td>
                       </tr>
                       <tr>
-                          <td class="auto-style24">
+                          <td class="auto-style42">
                               <asp:Label ID="Label2" runat="server" Text="Parking Area"></asp:Label>
                           </td>
-                          <td class="auto-style25">
+                          <td class="auto-style43">
                               <asp:DropDownList ID="ddusarea" runat="server" Height="31px" Width="290px" OnSelectedIndexChanged="ddusarea_SelectedIndexChanged">
                               </asp:DropDownList>
                           </td>
                       </tr>
                       <tr>
-                          <td class="auto-style24">
+                          <td class="auto-style42">
                               <asp:Label ID="Label3" runat="server" Text="Date &amp; Time FROM"></asp:Label>
                           </td>
-                          <td class="auto-style25">
-                              <asp:TextBox ID="fdt" runat="server"></asp:TextBox><img src="image/calender.png" />
+                          <td class="auto-style43">
+                              <asp:TextBox ID="fdt" runat="server" Width="290px"></asp:TextBox><img src="../image/calender.png" />
                           </td>
                       </tr>
                       <tr>
-                          <td class="auto-style24">
+                          <td class="auto-style42">
                               <asp:Label ID="Label4" runat="server" Text="Date &amp; Time TO"></asp:Label>
                           </td>
-                          <td class="auto-style25">
-                              <asp:TextBox ID="tdt" runat="server"></asp:TextBox><img src="image/calender.png" />
+                          <td class="auto-style43">
+                              <asp:TextBox ID="tdt" runat="server" Width="290px"></asp:TextBox><img src="../image/calender.png" />
                           </td>
                       </tr>
                       <tr>
-                          <td class="auto-style26" colspan="2">
+                          <td class="auto-style45" colspan="2">
                               <asp:Button ID="btsearch" runat="server" Text="SEARCH" OnClick="btsearch_Click" />
                           </td>
                       </tr>
                   </table>
 
-              </div>
+            </div> &nbsp;</td>
+                            <td class="auto-style45">
+              <div class="auto-style35">
+      <asp:DataList ID="dtlSlot" runat="server" OnItemCommand="dtlSlot_ItemCommand" Height="250px" Width="500px">  
+            <FooterTemplate>
+                
+                <asp:Button ID="btbook" runat="server" OnClick="btbook_Click" Text="book" />
+            </FooterTemplate>
+            <ItemTemplate>  
+                <table  border="0" style="width: 50px; height: 50px;">  
+                    <tr>  
+                        <td>    
+                            <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/image/greencar.png" Height="50" />
+                                                       
+                        </td>  
+                    </tr>  
+                </table>  
+            </ItemTemplate>  
+        </asp:DataList>  
+   </div>
               
-            </fieldset>    
-        </form>
-    </div>&nbsp;</td>
-                <td class="auto-style11">&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style11">&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style11">&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style14"></td>
-            </tr>
-            <tr>
-                <td class="auto-style14"></td>
-            </tr>
-            <tr>
-                <td class="auto-style11">&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style11">&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style11">&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style11">&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style11">&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style11">&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style11">&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style11">&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style11">&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style11">&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style11">&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style28"></td>
-            </tr>
-            </table>
-    </div>
+          &nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style37">
+                                &nbsp;</td>
+                            <td class="auto-style45">
+                                &nbsp;</td>
+                        </tr>
+                    </table>
+
        
-   
+      </fieldset>    
+        </form></div></td>
+            </tr>
+        </table>
+    
+    </div>
+    
 </body>
 </html>
